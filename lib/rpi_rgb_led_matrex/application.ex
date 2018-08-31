@@ -9,7 +9,7 @@ defmodule RpiRgbLedMatrex.Application do
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: RpiRgbLedMatrex.Worker.start_link(arg)
-      # {RpiRgbLedMatrex.Worker, arg},
+      {RpiRgbLedMatrex.Matrix, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
