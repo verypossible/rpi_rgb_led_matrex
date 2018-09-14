@@ -18,7 +18,8 @@ defmodule RpiRgbLedMatrex.Matrix do
    * `opts` are any options to pass to GenServer.start_link
   """
   @spec start_link([term]) :: {:ok, pid}
-  def start_link(opts \\ [name: __MODULE__]) do
+  def start_link(opts) do
+    opts = Keyword.merge([name: __MODULE__], opts)
     GenServer.start_link(__MODULE__, :ok, opts)
   end
 
